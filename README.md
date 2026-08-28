@@ -281,12 +281,6 @@ Automatic deployment supported through GitHub.
 
 ---
 
-# 💬 Quote
-
-> "Good pizza is like the sun — it warms your soul and brings people together."
-
----
-
 <div align="center">
 
 # 🍕 Pizza Fiesta
