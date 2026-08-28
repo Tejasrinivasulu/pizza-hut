@@ -1,0 +1,30 @@
+import mongoose, { models } from "mongoose";
+const OrderSchema = new mongoose.Schema({
+    orderNumber: { type: String, unique: true },
+    userEmail: { type: String },
+    customerName: { type: String },
+    phone: { type: String },
+    streetAddress: { type: String },
+    city: { type: String },
+    state: { type: String },
+    country: { type: String },
+    postalCode: { type: String },
+    deliveryInstructions: { type: String },
+    cartProducts: { type: Object },
+    subtotal: { type: Number },
+    deliveryFee: { type: Number, default: 5 },
+    tax: { type: Number },
+    total: { type: Number },
+    paymentMethod: { type: String, enum: ['cod', 'online'], default: 'cod' },
+    onlinePaymentType: { type: String, enum: ['upi', 'credit_card', 'debit_card'] },
+    paymentStatus: { type: String, enum: ['pending', 'paid', 'cod_pending'], default: 'pending' },
+    orderStatus: {
+        type: String,
+        enum: ['pending', 'accepted', 'preparing', 'out_for_delivery', 'delivered', 'cancelled'],
+        default: 'pending',
+    },
+    paid: { type: Boolean, default: false },
+    isNewOrder: { type: Boolean, default: true },
+    revenueCountedAt: { type: Date },
+}, { timestamps: true });
+export const Order = (models === null || models === void 0 ? void 0 : models.Order) || mongoose.model("Order", OrderSchema);

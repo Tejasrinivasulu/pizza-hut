@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-poppins text-gray-100 min-h-screen antialiased;
+    background-color: #121618;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 50% -20%, rgba(250, 197, 100, 0.08), transparent),
+      radial-gradient(ellipse 80% 50% at 100% 50%, rgba(250, 197, 100, 0.04), transparent),
+      url('/assets/bg_dark.jpg');
+    background-repeat: repeat, no-repeat, repeat;
+    background-attachment: fixed;
+    background-size: auto, auto, auto;
+  }
+}
+
+h1 {
+  @apply text-3xl uppercase font-josefin;
+}
+
+h2 {
+  @apply text-2xl font-josefin;
+}
+
+h3 {
+  @apply text-xl font-josefin;
+}
+
+section.hero {
+  @apply block md:grid;
+  grid-template-columns: 0.4fr 0.6fr;
+}
+
+.input {
+  @apply block w-full mb-4 rounded-xl border border-gray-600 bg-gray-800/90 text-white p-3
+    placeholder:text-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40;
+}
+
+.input:disabled {
+  @apply cursor-not-allowed bg-gray-900/80 text-gray-500 border-gray-700;
+}
+
+textarea.input {
+  @apply min-h-[100px] resize-y;
+}
+
+*[data-slot='input'] {
+  @apply border-0 mb-0 px-0 text-sm;
+}
+
+label {
+  @apply text-gray-400 text-sm leading-tight block mb-1;
+}
+
+button[type='button'],
+a[role='button'] {
+  @apply text-sm font-medium;
+}
+
+button[type='submit']:not(.search-bar-btn):not(.auth-submit-btn) {
+  @apply border-primary bg-primary text-dark text-sm font-semibold rounded-lg px-4 py-2;
+}
+
+button:disabled:not(.auth-submit-btn):not(.search-bar-btn) {
+  @apply bg-gray-700 text-gray-500 cursor-not-allowed;
+}
+
+button[type='submit']:not(.search-bar-btn):not(.auth-submit-btn):disabled {
+  @apply bg-primary/50 border-0 cursor-not-allowed;
+}
+
+@keyframes reviews-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.reviews-marquee {
+  animation: reviews-marquee 32s linear infinite;
+}
