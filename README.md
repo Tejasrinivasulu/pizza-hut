@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://cdn-icons-png.flaticon.com/512/596/596024.png" width="120" alt="Pizza Fiesta"/>
-
 # 🍕 Pizza Fiesta
 
 ### Full-Stack Online Food Ordering Platform
@@ -29,8 +27,6 @@ Browse Menu • Customize Orders • Pay Online • Track Delivery • Manage Re
 # 📖 About Pizza Fiesta
 
 Pizza Fiesta is a modern full-stack food ordering web application that lets customers explore menus, customize items, place orders, and track deliveries — while giving restaurant admins full control over menu items, categories, users, orders, and reports. Built with Next.js 14, MongoDB, and Tailwind CSS, it delivers a fast, responsive, and production-ready ordering experience.
-
-> 🌐 **Live Demo:** [pizza-fiesta.vercel.app](https://pizza-fiesta.vercel.app/)
 
 ---
 
@@ -75,23 +71,9 @@ Pizza Fiesta is a modern full-stack food ordering web application that lets cust
 
 ---
 
-# 🖼️ Screenshots
-
-<p align="center"><strong>Home Page</strong></p>
-
-![Home Page](public/home.png)
-
-<p align="center"><strong>Menu Page</strong></p>
-
-![Menu Page](public/menu.png)
-
-<p align="center"><strong>Admin Dashboard</strong></p>
-
-![Admin Dashboard](public/admin-dashboard.png)
-
----
-
 # 🛠 Technology Stack
+
+<div align="center">
 
 | Category | Technology |
 |----------|------------|
@@ -111,6 +93,7 @@ Pizza Fiesta is a modern full-stack food ordering web application that lets cust
 | Animation | Framer Motion |
 | Deploy | Netlify / Vercel |
 
+</div>
 ---
 
 # 📂 Project Structure
@@ -253,30 +236,6 @@ Customer:
   Email:    customer@test.com
   Password: user12345
 ```
-
----
-
-# 🔄 User Workflow
-
-<div align="center">
-
-```text
-Sign Up / Login
- ↓
-Browse Menu & Add Items to Cart
- ↓
-Customize Size & Extras
- ↓
-Checkout (Stripe / Cash on Delivery)
- ↓
-Track Order Status
- ↓
-Download Invoice PDF
- ↓
-Admin: Manage Orders, Menu & Reports
-```
-
-</div>
 
 ---
 
